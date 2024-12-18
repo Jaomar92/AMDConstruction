@@ -1,5 +1,6 @@
 import React from "react";
-import Carosel from "./Carosel";
+import Carosel_i from "./Carosel_i";
+// import Carosel from "./Carosel";
 
 const OurWork = () => {
   return (
@@ -10,7 +11,8 @@ const OurWork = () => {
           Our Previous Work
         </h2>
         <div>
-          <Carosel />
+          <Carosel_i />
+          {/* <Carosel /> */}
         </div>
       </div>
     </section>

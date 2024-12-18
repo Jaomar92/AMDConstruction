@@ -68,19 +68,20 @@ const Carosel = () => {
           objectFit="cover"
           className="rounded-xl transition-all duration-200 ease-in-out cursor-pointer"
         />
+        <h2>Client</h2>
+        <button
+          onClick={prevSlide}
+          className="absolute left-0 top-1/2 transform h-12 rounded-xl hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
+        >
+          prev
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-0 top-1/2 transform h-12 rounded-xl hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
+        >
+          next
+        </button>
       </div>
-      <button
-        onClick={prevSlide}
-        className="absolute left-0 top-1/2 transform h-[459px] rounded-xl hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
-      >
-        prev
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-0 top-1/2 transform h-[459px] rounded-xl hover:bg-[#1a222f] mx-1 -mt-[10px] -translate-y-1/2 bg-[#111927] text-white p-2 group"
-      >
-        next
-      </button>
       <div className="flex justify-center mt-4">
         {images.map((_, index) => (
           <div
