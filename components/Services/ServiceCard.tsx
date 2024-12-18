@@ -8,7 +8,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, descrip, image }: ServiceCardProps) => {
   return (
-    <div className="py-8 ">
+    <div className="py-8 z-10">
       <div className="grid grid-rows-[215px_minmax(50px,_1fr)_80px] pb-12 gap-4 relative">
         <div className="h-16 w-16 bg-[#FFB92E] rounded-full absolute bottom-[42%] right-6"></div>
         <div

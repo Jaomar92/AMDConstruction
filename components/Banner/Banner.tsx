@@ -4,7 +4,7 @@ import BannerNav from "./BannerNav";
 
 const Banner = () => {
   return (
-    <section className="bg-[#000000] h-fit">
+    <section className="bg-[#000000] h-fit px-2 pt-3 md:py-0 md:px-0">
       <div className="text-neutral-100 container mx-auto">
         <div className="flex items-stretch justify-center gap-3">
           <div className="min-h-[95vh] w-full md:w-2/4 space-y-12 relative md:top-44 ">
