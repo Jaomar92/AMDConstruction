@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="h-12 bg-[url('/images/LOGO-blue.png')] bg-no-repeat bg-center w-44"></div>
           <div className="flex items-center gap-3">
-            <ul className="flex items-center gap-6 text-xl text-[#354D71] font-bold">
+            {/* <ul className="flex items-center gap-6 text-xl text-[#354D71] font-bold">
               <li className="hover:text-neutral-100 cursor-pointer transistion-all duration-150 ease-linear">
                 ABOUT US
               </li>
@@ -17,7 +17,7 @@ const Navbar = () => {
               <li className="hover:text-neutral-100 cursor-pointer transistion-all duration-150 ease-linear">
                 CONTACT
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>

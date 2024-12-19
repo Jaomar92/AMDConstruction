@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import Carosel_i_card from "./Carosel_i_card";
 
 const slideData = [
   {
     title: "Impian Meridian",
+    img: "https://www.amdconstruction.com.my/assets/img/im01.png",
     des: "The proposed development of two 5 storey office blocks (40 units), 27 & 28 storey service apartment blocks (481 units) above lot 39015 and 39016, Subang Industrial Park, USJ 1.",
     MYR: "RM10,011,000.00",
     location: "USJ 1, Subang Jaya",
@@ -12,6 +14,7 @@ const slideData = [
   },
   {
     title: "Energy Commission",
+    img: "https://www.amdconstruction.com.my/assets/img/ec01.png",
     des: "This is an energy efficient and sustainable 8 storey office building on a 5000 sq m site. The design is inspired by the “diamond form” which is a passive design response to energy efficiency. The building is geared towards being a showcase as well as a landmark building in Precinct 2, Putrajaya.",
     MYR: "RM26,310,000.00",
     location: "Precinct 2, Putrajaya",
@@ -20,6 +23,7 @@ const slideData = [
   },
   {
     title: "SMK Puncak Alam 3",
+    img: "https://www.amdconstruction.com.my/assets/img/projects/PA301.png",
     des: "Proposed the construction and completion of Industrialised Building Systems (IBS) project for SMK Puncak Alam 3, which comprises 24 classrooms and related facilities at phase 3 above lot 7664 in the sub-district of Ijok",
     MYR: "RM6,660,726.30",
     location: "Bandar Puncak Alam, Selangor",
@@ -50,12 +54,12 @@ const Carosel_i = () => {
   };
 
   return (
-    <div className="h-[70vh] bg-[#FFB92E] rounded-2xl relative overflow-hidden">
+    <div className="h-[70vh]  rounded-2xl relative overflow-hidden mx-1 md:mx-0">
       <div className="h-full w-full grid place-content-center relative">
         {slideData.map((slide, index) => (
           <div
             key={index}
-            className={`absolute w-full h-full flex items-center justify-center transition-opacity duration-500 ${
+            className={`absolute w-full h-full flex  transition-opacity duration-500 ${
               index === currentIndex
                 ? direction === "next"
                   ? "opacity-100 animate-enter-next"
@@ -66,14 +70,20 @@ const Carosel_i = () => {
             }`}
             onAnimationEnd={() => setAnimating(false)}
           >
-            <h1>{slide.title}</h1>
+            <Carosel_i_card
+              title={slide.title}
+              des={slide.des}
+              MYR={slide.MYR}
+              location={slide.location}
+              img={slide.img}
+            />
           </div>
         ))}
       </div>
-      <div className="absolute p-2 bg-blue-200 top-1/2 translate-y-[-50%] left-2">
+      <div className="absolute p-2 bg-blue-200/30 rounded-xl top-1/2 translate-y-[-50%] left-2">
         <button onClick={prevSlide}>Prev</button>
       </div>
-      <div className="absolute p-2 bg-blue-200 top-1/2 translate-y-[-50%] right-2">
+      <div className="absolute p-2 bg-blue-200/30 rounded-xl top-1/2 translate-y-[-50%] right-2">
         <button onClick={nextSlide}>Next</button>
       </div>
     </div>
