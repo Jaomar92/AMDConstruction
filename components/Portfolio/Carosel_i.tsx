@@ -23,7 +23,7 @@ const slideData = [
   },
   {
     title: "SMK Puncak Alam 3",
-    img: "https://www.amdconstruction.com.my/assets/img/projects/PA301.png",
+    img: "https://fastly.4sqi.net/img/general/600x600/8548835_2M1mKR5_Zom7LukOFg3HKCLKpO2BKsrA1MZg0-H92zo.jpg",
     des: "Proposed the construction and completion of Industrialised Building Systems (IBS) project for SMK Puncak Alam 3, which comprises 24 classrooms and related facilities at phase 3 above lot 7664 in the sub-district of Ijok",
     MYR: "RM6,660,726.30",
     location: "Bandar Puncak Alam, Selangor",
