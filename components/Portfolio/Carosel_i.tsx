@@ -53,13 +53,20 @@ const Carosel_i = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slideData.length);
   };
 
+  const goToSlide = (index: number): void => {
+    if (animating) return;
+    setAnimating(true);
+    setDirection(index > currentIndex ? "next" : "prev");
+    setCurrentIndex(index);
+  };
+
   return (
-    <div className="h-[70vh]  rounded-2xl relative overflow-hidden mx-1 md:mx-0">
+    <div className="h-[70vh] rounded-2xl relative overflow-hidden mx-1 md:mx-0">
       <div className="h-full w-full grid place-content-center relative">
         {slideData.map((slide, index) => (
           <div
             key={index}
-            className={`absolute w-full h-full flex  transition-opacity duration-500 ${
+            className={`absolute w-full h-full flex transition-opacity duration-500 ${
               index === currentIndex
                 ? direction === "next"
                   ? "opacity-100 animate-enter-next"
@@ -85,6 +92,19 @@ const Carosel_i = () => {
       </div>
       <div className="absolute p-2 bg-blue-200/30 rounded-xl top-1/2 translate-y-[-50%] right-2">
         <button onClick={nextSlide}>Next</button>
+      </div>
+      <div className="absolute bottom-5 flex right-[50%] translate-x-[50%] gap-3">
+        {slideData.map((_, index) => (
+          <div
+            key={index}
+            className={`h-2 rounded-full cursor-pointer ${
+              index === currentIndex
+                ? "bg-neutral-100/80 w-16"
+                : "bg-neutral-200/30 w-8"
+            } transition-all duration-300 ease-linear`}
+            onClick={() => goToSlide(index)}
+          ></div>
+        ))}
       </div>
     </div>
   );
